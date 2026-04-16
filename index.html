@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #ece8e0;
+            color: #3e3a35;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 1.2rem;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: flex;
+            gap: 1.2rem;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        /* ---------- 侧边栏 ---------- */
+        .sidebar {
+            flex: 0 0 280px;
+            background: #f3efe9;
+            border-radius: 28px;
+            padding: 2.4rem 1.8rem;
+            box-shadow: 0 6px 18px rgba(140, 130, 115, 0.06);
+            border: 1px solid #dbd3ca;
+            height: fit-content;
+            backdrop-filter: blur(2px);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .sidebar:hover {
+            box-shadow: 0 10px 24px rgba(120, 105, 90, 0.08);
+        }
+
+        .site-title {
+            font-size: 2.2rem;
+            font-weight: 420;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.3rem;
+            color: #4d463c;
+            line-height: 1.2;
+        }
+
+        .site-subtitle {
+            font-size: 0.9rem;
+            color: #8e8376;
+            margin-bottom: 2.2rem;
+            border-bottom: 1.5px solid #d6cdc2;
+            padding-bottom: 1.2rem;
+            font-weight: 350;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #6b6156;
+            font-size: 1.1rem;
+            font-weight: 380;
+            display: block;
+            padding: 0.6rem 0.8rem;
+            border-radius: 40px;
+            transition: all 0.18s;
+            background: transparent;
+        }
+
+        .nav-menu a:hover {
+            background: #e0d8cf;
+            color: #3e362e;
+            padding-left: 1.2rem;
+        }
+
+        /* ---------- 主内容 ---------- */
+        .main-content {
+            flex: 1;
+            background: #f6f3ef;
+            border-radius: 28px;
+            padding: 2.8rem 3rem;
+            box-shadow: 0 6px 18px rgba(140, 130, 115, 0.05);
+            border: 1px solid #dbd3ca;
+            min-height: 520px;
+            backdrop-filter: blur(2px);
+        }
+
+        .main-content h2 {
+            font-size: 2rem;
+            font-weight: 420;
+            margin-bottom: 1.8rem;
+            color: #4d463c;
+            letter-spacing: -0.01em;
+            border-left: 6px solid #b7aa9b;
+            padding-left: 1.5rem;
+        }
+
+        .placeholder-text {
+            color: #6b6258;
+            font-style: normal;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 350;
+        }
+
+        .placeholder-text:first-of-type {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #5a5147;
+        }
+
+        .divider-light {
+            height: 2px;
+            background: linear-gradient(90deg, #d4c9be, #e5ddd3, #d4c9be);
+            margin: 2rem 0 1.8rem;
+            border: 0;
+            opacity: 0.7;
+        }
+
+        .insight-card {
+            background: #ede7e0;
+            padding: 1.6rem 1.8rem;
+            border-radius: 24px;
+            margin: 1.8rem 0 1.2rem;
+            border: 1px solid #dbd0c5;
+            color: #514a41;
+            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.8), 0 4px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .insight-card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .insight-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.6rem;
+            border-top: 1.5px solid #dbd3ca;
+            font-size: 0.85rem;
+            color: #988e83;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-note a {
+            color: #7a6f63;
+            text-decoration: none;
+            font-weight: 400;
+            border-bottom: 1px dotted #bcb0a4;
+        }
+
+        .footer-note a:hover {
+            color: #4f463d;
+            border-bottom: 1px solid #9a8d80;
+        }
+
+        .meta-tag {
+            display: inline-block;
+            background: #e3dbd2;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            color: #5f554b;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 0.8rem;
+                align-items: flex-start;
+            }
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex: auto;
+                width: 100%;
+                padding: 1.8rem;
+            }
+            .main-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        .accent-soft {
+            color: #917b6d;
+        }
+
+        .chinese-verse {
+            font-size: 0.9rem;
+            color: #958a7e;
+            margin-top: 0.3rem;
+            font-weight: 350;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 导航 -->
+        <aside class="sidebar">
+            <h1 class="site-title">标题1</h1>
+            <div class="site-subtitle">小标题</div>
+            <div class="chinese-verse" style="margin-bottom: 2rem; margin-top: -0.5rem;">—— 小小标题</div>
+            
+            <ul class="nav-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+            </ul>
+            
+            <div style="margin-top: 2.8rem; font-size: 0.8rem; color: #a79b8f; border-left: 2px solid #d4c9be; padding-left: 1rem;">
+                <span>底部</span><br>
+                <span style="font-size: 0.7rem; opacity: 0.7;">sss</span>
+            </div>
+        </aside>
+
+        <!-- 右侧 · 主要内容 -->
+        <main class="main-content">
+            <h2>标题2</h2>
+            <p class="placeholder-text">内容</p>
+
+            <!-- 增加一个视觉层次：卡片式引用，丰富质感 -->
+            <div class="insight-card">
+                <p>卡片</p>
+            </div>
+
+            <!-- 描述 -->
+            <p class="placeholder-text" style="margin-top: 1.2rem;">内容</p>
+            
+            <!-- 分隔线 -->
+            <hr class="divider-light">
+
+            <!-- 小贴士 -->
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: baseline;">
+                <span class="meta-tag">TAG</span>
+            </div>
+
+            <!-- footer -->
+            <div class="footer-note">
+                <span>底部</span>
+                <span>
+                    <a href="#">1</a> · 
+                    <a href="#">2</a> · 
+                    <a href="#">3</a>
+                </span>
+            </div>
+            
+        </main>
+    </div>
+</body>
+</html>
