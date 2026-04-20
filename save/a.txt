@@ -1,0 +1,51 @@
+        <div class="hyy-quote-content">
+            <span class="hyy-tooltip">
+                Phecuar
+                <span class="hyy-tooltip-text">
+                    <i>pa.</i> "镜中的倒影"
+                </span>
+            </span>
+            <span class="hyy-tooltip">
+                <span class="hyy-tooltip-text">
+                    <i>va.</i> 关系前缀, 来自 *√ĭak- "我"
+                </span>
+                eu</span><span class="hyy-tooltip">
+                becu
+                <span class="hyy-tooltip-text">
+                    <i>vr.</i> "自我"
+                </span>
+            </span><span class="hyy-tooltip">
+                eauaoû
+                <span class="hyy-tooltip-text">
+                    <i>vr.</i> "忧伤"
+                </span>
+            </span><span class="hyy-tooltip">
+                mzea
+                <span class="hyy-tooltip-text">
+                    <i>vr.</i> "更加"
+                </span>
+            </span><span class="hyy-tooltip">
+                dhsecie
+                <span class="hyy-tooltip-text">
+                    <i>pr.</i> 状态后缀, "刚刚实现, 刚刚成为"
+                </span>
+            </span>
+            <span class="hyy-tooltip">
+                cetoie
+                <span class="hyy-tooltip-text">
+                    <i>pr.</i> "那个, 那", 此处为单次主角视角
+                </span>
+            </span>
+            <span class="hyy-tooltip">
+                Ansruèshe
+                <span class="hyy-tooltip-text">
+                    <i>vr.</i> "安茜露夏", 人名
+                </span>
+            </span><span class="hyy-tooltip">
+                vuesfeitt
+                <span class="hyy-tooltip-text">
+                    <i>vr.</i> "她持续地注视着它"
+                </span>
+            </span>
+            <span>.</span>
+        </div>

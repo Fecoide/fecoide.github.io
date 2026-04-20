@@ -1,278 +1,117 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>标题</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #ece8e0;
-            color: #3e3a35;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 1.2rem;
-        }
-
-        .container {
-            margin: 0 auto;
-            display: flex;
-            gap: 1.2rem;
-            width: 100%;
-            max-width: 1400px;
-        }
-
-        /* ---------- 侧边栏 ---------- */
-        .sidebar {
-            flex: 0 0 280px;
-            background: #f3efe9;
-            border-radius: 28px;
-            padding: 2.4rem 1.8rem;
-            box-shadow: 0 6px 18px rgba(140, 130, 115, 0.06);
-            border: 1px solid #dbd3ca;
-            height: fit-content;
-            backdrop-filter: blur(2px);
-            transition: box-shadow 0.2s ease;
-        }
-
-        .sidebar:hover {
-            box-shadow: 0 10px 24px rgba(120, 105, 90, 0.08);
-        }
-
-        .site-title {
-            font-size: 2.2rem;
-            font-weight: 420;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.3rem;
-            color: #4d463c;
-            line-height: 1.2;
-        }
-
-        .site-subtitle {
-            font-size: 0.9rem;
-            color: #8e8376;
-            margin-bottom: 2.2rem;
-            border-bottom: 1.5px solid #d6cdc2;
-            padding-bottom: 1.2rem;
-            font-weight: 350;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .nav-menu {
-            list-style: none;
-        }
-
-        .nav-menu li {
-            margin-bottom: 0.5rem;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: #6b6156;
-            font-size: 1.1rem;
-            font-weight: 380;
-            display: block;
-            padding: 0.6rem 0.8rem;
-            border-radius: 40px;
-            transition: all 0.18s;
-            background: transparent;
-        }
-
-        .nav-menu a:hover {
-            background: #e0d8cf;
-            color: #3e362e;
-            padding-left: 1.2rem;
-        }
-
-        /* ---------- 主内容 ---------- */
-        .main-content {
-            flex: 1;
-            background: #f6f3ef;
-            border-radius: 28px;
-            padding: 2.8rem 3rem;
-            box-shadow: 0 6px 18px rgba(140, 130, 115, 0.05);
-            border: 1px solid #dbd3ca;
-            min-height: 520px;
-            backdrop-filter: blur(2px);
-        }
-
-        .main-content h2 {
-            font-size: 2rem;
-            font-weight: 420;
-            margin-bottom: 1.8rem;
-            color: #4d463c;
-            letter-spacing: -0.01em;
-            border-left: 6px solid #b7aa9b;
-            padding-left: 1.5rem;
-        }
-
-        .placeholder-text {
-            color: #6b6258;
-            font-style: normal;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            font-weight: 350;
-        }
-
-        .placeholder-text:first-of-type {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #5a5147;
-        }
-
-        .divider-light {
-            height: 2px;
-            background: linear-gradient(90deg, #d4c9be, #e5ddd3, #d4c9be);
-            margin: 2rem 0 1.8rem;
-            border: 0;
-            opacity: 0.7;
-        }
-
-        .insight-card {
-            background: #ede7e0;
-            padding: 1.6rem 1.8rem;
-            border-radius: 24px;
-            margin: 1.8rem 0 1.2rem;
-            border: 1px solid #dbd0c5;
-            color: #514a41;
-            box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.8), 0 4px 8px rgba(0, 0, 0, 0.02);
-        }
-
-        .insight-card p {
-            margin-bottom: 0.5rem;
-        }
-
-        .insight-card p:last-child {
-            margin-bottom: 0;
-        }
-
-        .footer-note {
-            margin-top: 3.5rem;
-            padding-top: 1.6rem;
-            border-top: 1.5px solid #dbd3ca;
-            font-size: 0.85rem;
-            color: #988e83;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-note a {
-            color: #7a6f63;
-            text-decoration: none;
-            font-weight: 400;
-            border-bottom: 1px dotted #bcb0a4;
-        }
-
-        .footer-note a:hover {
-            color: #4f463d;
-            border-bottom: 1px solid #9a8d80;
-        }
-
-        .meta-tag {
-            display: inline-block;
-            background: #e3dbd2;
-            padding: 0.2rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            color: #5f554b;
-            letter-spacing: 0.3px;
-        }
-
-        @media (max-width: 700px) {
-            body {
-                padding: 0.8rem;
-                align-items: flex-start;
-            }
-            .container {
-                flex-direction: column;
-            }
-            .sidebar {
-                flex: auto;
-                width: 100%;
-                padding: 1.8rem;
-            }
-            .main-content {
-                padding: 2rem 1.5rem;
-            }
-        }
-
-        .accent-soft {
-            color: #917b6d;
-        }
-
-        .chinese-verse {
-            font-size: 0.9rem;
-            color: #958a7e;
-            margin-top: 0.3rem;
-            font-weight: 350;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/global.css">
+    <script src="assets/js/theme-select.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <title>Gacoeule</title>
 </head>
+
 <body>
-    <div class="container">
-        <!-- 导航 -->
-        <aside class="sidebar">
-            <h1 class="site-title">标题1</h1>
-            <div class="site-subtitle">小标题</div>
-            <div class="chinese-verse" style="margin-bottom: 2rem; margin-top: -0.5rem;">—— 小小标题</div>
-            
-            <ul class="nav-menu">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-            </ul>
-            
-            <div style="margin-top: 2.8rem; font-size: 0.8rem; color: #a79b8f; border-left: 2px solid #d4c9be; padding-left: 1rem;">
-                <span>底部</span><br>
-                <span style="font-size: 0.7rem; opacity: 0.7;">sss</span>
-            </div>
-        </aside>
-
-        <!-- 右侧 · 主要内容 -->
-        <main class="main-content">
-            <h2>标题2</h2>
-            <p class="placeholder-text">内容</p>
-
-            <!-- 增加一个视觉层次：卡片式引用，丰富质感 -->
-            <div class="insight-card">
-                <p>卡片</p>
-            </div>
-
-            <!-- 描述 -->
-            <p class="placeholder-text" style="margin-top: 1.2rem;">内容</p>
-            
-            <!-- 分隔线 -->
-            <hr class="divider-light">
-
-            <!-- 小贴士 -->
-            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: baseline;">
-                <span class="meta-tag">TAG</span>
-            </div>
-
-            <!-- footer -->
-            <div class="footer-note">
-                <span>底部</span>
-                <span>
-                    <a href="#">1</a> · 
-                    <a href="#">2</a> · 
-                    <a href="#">3</a>
+    <button class="hyy-theme-btn" id="theme-toggle" type="button" aria-label="切换主题"></button>
+    <h1 class="hyy-title">- NORSFAINES -</h1>
+    <p class="hyy-title-sub">诺尔菲闪烁的特耳荷斯</p>
+    <div id="nav-container"></div>
+    <hr />
+    <!-- <p> 作者: Fecoide 版本: 2026.1.1</p> -->
+    <div class="hyy-quote">
+        <div class="hyy-quote-content">
+            <span class="hyy-tooltip">
+                Phecuar
+                <span class="hyy-tooltip-text">
+                    <i>pa.</i> "镜中的倒影"
                 </span>
-            </div>
-            
-        </main>
+            </span>
+            <span class="hyy-tooltip">
+                eubecueauaoûmzeadhsecie
+                <span class="hyy-tooltip-text">
+                    <i>pr.</i> "它刚刚转变成更哀伤的自我"
+                </span>
+            </span>
+            <span class="hyy-tooltip">
+                cetoie
+                <span class="hyy-tooltip-text">
+                    <i>pr.</i> "那个, 那", 此处为单次主角视角
+                </span>
+            </span>
+            <span class="hyy-tooltip">
+                Ansruèshevuesfeitt
+                <span class="hyy-tooltip-text">
+                    <i>vr.</i> "安茜露夏持续地凝视着它"
+                </span>
+            </span>
+            <span>.</span>
+        </div>
+        <div class="hyy-quote-translate">
+            安茜露夏凝视着镜中那个方才变得比她更哀伤的自己, 目光久久未移.
+        </div>
     </div>
+    <hr />
+    </span>
+    <blockquote>
+        <p>
+            本教程内容参考特雷尔世界(架空世界)的诺法语学者 Jashonze Cunade 于失月纪元 1620 年撰写的 <i>Vädêipobnedicotain</i> (直译 "我带来了修辞学", 我建议意译为
+            "修辞启蒙" 或
+            "语法指南").
+            原文采用诺法学术传统, 其术语体系与地球语言学概念并不完全互通. 编者在处理时遵循以下原则:
+        </p>
+        <ul>
+            <li>
+                对诺法术语采取 "直译+保留原文" 的方式, 如 coùens 直译为 "潮汐", 实际上更接近起始体;
+            </li>
+            <li>
+                为确保纯粹的诺法风格, 所有术语的语义范围, 以诺法原体系的定义和示例为准, 不强行归入地球分类.
+                <div class="hyy-del">
+                    我故意不小心保留了一些蹩脚的翻译, 这样你才能知道这是诺法人自己的语法书.
+                </div>
+            </li>
+        </ul>
+    </blockquote>
+    <p class="hyy-drop">
+        为了表达和解释客观世界, <ruby>精灵们<rt>THORQAIS</rt></ruby> <sup><a class="hyy-note" href="#1">1</a></sup> 在主观意识中将世界分为意识流与事件,
+        并通过某些逻辑和规则将它们组合起来形成了语言,
+        而这个过程被我们叫做<b>修辞</b>(Vädêipobne, 伐丹帕迷) <sup><a class="hyy-note" href="#2">2</a></sup> . 因此,
+        格蔻尔语天生不是客观实在,
+        客观存在天生不是格蔻尔语. 尽管格蔻尔语与精灵们身处的客观世界有着鲜明的分野, 尽管格蔻尔语永远无法抵达绝对的真实, 但我们依旧固执地在意识中用一套由未知的命运所约定的符号系统为世界绘制地图并分享出去,
+        哪怕这套系统无比复杂,
+        因为我们就是为此而生的. 这就是格蔻尔语的起源. 为了将精灵的意识地图规范化, <ruby><b>我带来了修辞学</b>
+            <rt>VÄDÊIPOBNEDICOTAIN</rt>
+        </ruby>.
+    </p>
+    <p>
+        不同的精灵在一个普遍的修辞上不断地进行个性的包装和美化, 不同的语言就此诞生. 而我们把这个普遍的修辞叫做<b>原初之诗</b>(ganteavrai, 甘第符雷). 原初之诗随灵魂的出现而出现, 是灵魂与生俱来的馈赠,
+        是烙印在精灵的灵魂里的, 我们无时无刻不在运用它, 但无法客观地看见它. <span class="hyy-del">所以原初之诗是存在的, 但原初之诗存在不太可能.</span> "凡是不能自视的, 那无相者必使其溺亡;
+        凡是能自视的, 那无相者必于其无措. (诺法旧日书
+        1:7)" 终点素来没有意义, 而精灵自视只是为了不会消亡. 为了固执地自视, 为原初之诗绘制<ruby>地图<rt>CAR</rt></ruby>, 我带来了修辞学.
+    </p>
+    <p>
+    <blockquote>
+        <ul>
+            <li>
+                <sup id="1">1</sup> [译注] 诺法文化中, 具有生命与灵魂的所有存在都被称为精灵, 包括人类. 精灵: <span class="hyy-song">√tas- "月" >
+                    *ta(s)-rkë-s >
+                    *stŭarkës >
+                    thorqais</span>.
+            </li>
+            <li>
+                <sup id="2">2</sup> [译注] 准确说应该是语法, 但原文如此.
+            </li>
+        </ul>
+    </blockquote>
+    </p>
+    <hr />
+    <!-- <p>
+        <a href="https://github.com/fecoide">我的 GitHub</a>
+    </p>
+
+    <ul>
+        <li>
+            <a href="pages/languages.html">语言</a>
+        </li>
+    </ul> -->
 </body>
+
 </html>

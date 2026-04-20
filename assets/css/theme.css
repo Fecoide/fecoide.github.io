@@ -1,0 +1,44 @@
+:root {
+    /* 大背景 */
+    --color-bg: #f3efe8;
+    /* 文字 */
+    --color-text: #2c2822;
+    /* 粗体字 */
+    --color-emphasis: #999ec1;
+    /* 引用背景 */
+    --color-blockquote: #e3ddd2;
+    /* 刮层底色 */
+    --color-del: #0000000d;
+    /* 边框 */
+    --color-border: #cfc3b6;
+    /* 当作底色的阴影 */
+    --color-shadow-bg: #e3ddd2;
+
+    /* 段落字体大小 */
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.6rem;
+    --font-size-p: 1.2rem;
+    --font-size-p-smaller: 1rem;
+    --font-size-p-larger: 1.4rem;
+    /* --font-size-p-larger-larger: 1.4rem; */
+    --font-size-li: 1rem;
+    --font-size-drop: 2em;
+}
+
+
+[data-theme="dark"] {
+    /* 大背景 */
+    --color-bg: #1e2424;
+    /* 文字 */
+    --color-text: #d6d9ce;
+    /* 粗体字 */
+    --color-emphasis: #70ad87;
+    /* 引用背景 */
+    --color-blockquote: #2a3333;
+    /* 悬停才显示的文字的底色 */
+    --color-del: #c0cfc80d;
+    /* 边框 */
+    --color-border: #4a5a54;
+    /* 当作底色的阴影 */
+    --color-shadow-bg: #3e4a4a;
+}
