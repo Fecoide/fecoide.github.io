@@ -1,5 +1,5 @@
 /**
- * 可折叠导航栏 - 带动画版
+ * 导航栏
  */
 function loadNav() {
     // 自动计算当前页面的深度
@@ -11,15 +11,15 @@ function loadNav() {
     const navHtml = `
         <nav class="hyy-nav" id="hyy-main-nav">
             <div class="hyy-nav-header">
-                <span class="hyy-nav-title">导航</span>
+                <span class="hyy-nav-title">NORSFAINES</span>
                 <button class="hyy-nav-close" id="nav-close-btn" aria-label="关闭">✕</button>
             </div>
             <div class="hyy-nav-links">
                 <a href="${prefix}index.html" data-nav="home">首页</a>
-                <a href="${prefix}pages/languages.html" data-nav="languages">语言</a>
-                <a href="" data-nav="grammar">格蔻尔语</a>
-                <a href="" data-nav="grammar">法罗士语</a>
-                <a href="" data-nav="grammar">诺尔菲闪烁的特耳荷斯</a>
+                <a href="${prefix}pages/languages.html" data-nav="languages">语言列表</a>
+                <a href="${prefix}pages/norsfaines.html" data-nav="grammar">格蔻尔语</a>
+                <a href="${prefix}pages/404.html" data-nav="grammar">法罗士语</a>
+                <a href="${prefix}pages/404.html" data-nav="grammar">诺尔菲闪烁的特耳荷斯</a>
             </div>
         </nav>
     `;
@@ -40,7 +40,7 @@ function loadNav() {
         }
     });
 
-    // --- 折叠展开逻辑 ---
+    // 折叠展开逻辑
     const nav = document.getElementById('hyy-main-nav');
     const toggleBtn = document.getElementById('nav-toggle-btn');
     const closeBtn = document.getElementById('nav-close-btn');

@@ -43,7 +43,7 @@ a {
 
 b {
     color: var(--color-emphasis);
-    /* font-weight: 100; */
+    /* font-weight: 300; */
     margin: 0 0.2em;
 }
 
@@ -84,7 +84,7 @@ body {
     /* display: flex; */
     line-height: 1.6;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 2rem 10vw 0 10vw;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -97,14 +97,14 @@ del {
 h1 {
     font-family: "Song", system-ui, -apple-system, sans-serif;
     font-size: var(--font-size-h1);
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 1.2rem;
 }
 
 h2 {
     font-family: "Song", system-ui, -apple-system, sans-serif;
     font-size: var(--font-size-h2);
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 1.2rem;
 }
 
@@ -148,6 +148,90 @@ ul {
     margin-left: 1rem;
 }
 
+.hyy-404-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.hyy-contents {
+    background: var(--color-bg);
+    color: var(--color-text);
+    /* border-right: 3px solid var(--color-border); */
+    font-family: "Song", system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-p-smaller);
+    height: 100%;
+    right: 0;
+    min-width: 220px;
+    overflow: hidden;
+    padding: 56px 16px 0 16px;
+    position: fixed;
+    box-shadow: 8px 0px 20px var(--color-border);
+    top: 0px;
+    transform: translateX(120%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.hyy-contents.show {
+    transform: translateX(0);
+}
+
+.hyy-contents-btn {
+    background: var(--color-del);
+    border: 0px solid transparent;
+    border-radius: 100%;
+    bottom: 16px;
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px;
+    padding: 8px;
+    position: fixed;
+    right: 16px;
+    width: 40px;
+    top: 16px;
+    transition: all 0.4s;
+    z-index: 999;
+}
+
+.hyy-contents-btn:hover {
+    background: var(--color-btn-hover);
+}
+
+.hyy-contents a {
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    display: block;
+    padding: 12px 0px;
+    text-decoration: none;
+}
+
+.hyy-contents a:hover {
+    color: var(--color-emphasis);
+    font-size: var(--font-size-p);
+}
+
+.hyy-contents-close {
+    background: transparent;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: var(--font-size-p-larger);
+    font-weight: 1000;
+    padding: 8px 16px;
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    transition: all 0.4s;
+    z-index: 999;
+}
+
+.hyy-contents-close:hover {
+    color: var(--color-emphasis);
+}
 
 .hyy-quote {
     /* background: var(--color-blockquote); */
@@ -180,7 +264,7 @@ ul {
 .hyy-quote-translate {
     font-family: "Song", system-ui, -apple-system, sans-serif;
     font-size: var(--font-size-p-smaller);
-    font-weight: 100;
+    font-weight: 300;
     /* margin-bottom: 1rem; */
 }
 
@@ -259,15 +343,11 @@ ul {
     cursor: pointer;
     font-size: 16px;
     padding: 8px 16px;
-    position: fixed;
+    position: absolute;
     left: 16px;
     top: 16px;
     transition: all 0.4s;
     z-index: 999;
-}
-
-.hyy-nav-btn:hover {
-    border-color: var(--color-emphasis);
 }
 
 .hyy-nav-close:hover {
@@ -301,6 +381,17 @@ ul {
 .hyy-nav-title {
     font-weight: 1000;
     color: var(--color-emphasis);
+}
+
+.hyy-page-desc {
+    color: var(--color-border);
+    font-family: "Round", system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-desc);
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    top: -12px
+    /* margin-bottom: 1rem; */
 }
 
 .hyy-socrate {
@@ -360,7 +451,7 @@ ul {
     border-bottom: 3px dotted var(--color-border);
     cursor: help;
     display: inline-block;
-    font-weight: 100;
+    font-weight: 300;
     position: relative;
     word-break: break-all;
 }
@@ -380,7 +471,7 @@ ul {
     color: var(--color-text);
     font-family: "Round", system-ui, -apple-system, sans-serif;
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
     left: 50%;
     margin-bottom: 8px;
     max-width: 160px;
