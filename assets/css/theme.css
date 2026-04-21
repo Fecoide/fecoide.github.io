@@ -13,6 +13,8 @@
     --color-border: #cfc3b6;
     /* 当作底色的阴影 */
     --color-shadow-bg: #e3ddd2;
+    /* 按钮悬停 */
+    --color-btn-hover: #ded3c8;
 
     /* 段落字体大小 */
     --font-size-h1: 1.6rem;
@@ -41,4 +43,6 @@
     --color-border: #4a5a54;
     /* 当作底色的阴影 */
     --color-shadow-bg: #3e4a4a;
+    /* 按钮悬停 */
+    --color-btn-hover: #3a4641;
 }

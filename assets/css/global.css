@@ -1,3 +1,5 @@
+/* 都按照首字母排序, 不要乱写 */
+
 @import url('./theme.css');
 
 @font-face {
@@ -213,13 +215,92 @@ ul {
 }
 
 .hyy-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    /* border-right: 3px solid var(--color-border); */
+    font-family: "Song", system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-p-smaller);
+    height: 100%;
+    left: 16px;
+    min-width: 220px;
+    overflow: hidden;
+    padding: 8px 16px 0 16px;
+    position: fixed;
+    box-shadow: -8px 0px 20px var(--color-border);
+    top: 0px;
+    transform: translateX(-120%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    left: 0px;
+    z-index: 1000;
 }
 
-.hyy-nav-item {
-    margin: 0 1rem;
+.hyy-nav.show {
+    transform: translateX(0);
+}
+
+.hyy-nav a {
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    display: block;
+    padding: 12px 0px;
+    text-decoration: none;
+}
+
+.hyy-nav a:hover {
+    color: var(--color-emphasis);
+    font-size: var(--font-size-p);
+}
+
+.hyy-nav-btn {
+    background: transparent;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+    position: fixed;
+    left: 16px;
+    top: 16px;
+    transition: all 0.4s;
+    z-index: 999;
+}
+
+.hyy-nav-btn:hover {
+    border-color: var(--color-emphasis);
+}
+
+.hyy-nav-close:hover {
+    color: var(--color-emphasis);
+}
+
+.hyy-nav-close {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 1000;
+    line-height: 1;
+    padding: 0 4px;
+    transition: color 0.2s;
+}
+
+.hyy-nav-header {
+    align-items: center;
+    /* background: var(--color-blockquote); */
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.hyy-nav-links {
+    padding: 0;
+}
+
+.hyy-nav-title {
+    font-weight: 1000;
+    color: var(--color-emphasis);
 }
 
 .hyy-socrate {
@@ -232,24 +313,28 @@ ul {
 }
 
 .hyy-theme-btn {
-    background: var(--color-blockquote);
-    border: 2px solid var(--color-border);
-    border-radius: 50px;
+    background: var(--color-del);
+    border: 0px solid transparent;
+    border-radius: 100%;
+    bottom: 16px;
+    color: var(--color-text);
     cursor: pointer;
-    font-size: 1.2rem;
-    height: 44px;
-    line-height: 1;
-    padding: 0;
-    position: absolute;
-    right: 2rem;
-    transition: all 0.2s ease;
-    width: 44px;
+    font-size: 16px;
+    height: 40px;
+    padding: 8px;
+    position: fixed;
+    right: 16px;
+    width: 40px;
+    transition: all 0.4s;
+    z-index: 999;
+}
+
+.hyy-theme-btn svg path {
+    fill: var(--color-text);
 }
 
 .hyy-theme-btn:hover {
-    background: var(--color-bg);
-    border-color: var(--color-emphasis);
-    transform: scale(1.05);
+    background: var(--color-btn-hover);
 }
 
 .hyy-title {
@@ -326,3 +411,8 @@ ul {
     top: 100%;
     transform: translateX(-50%);
 }
+/* 
+#nav-container {
+    position: relative;
+}
+ */
