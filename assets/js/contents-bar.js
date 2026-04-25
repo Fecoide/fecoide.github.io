@@ -1,8 +1,19 @@
 /**
  * 目录
  */
-
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. 注入目录 HTML
+    const contentsHTML = `
+        <div class="hyy-contents">
+            <button class="hyy-contents-close" type="button" aria-label="关闭目录">✕</button>
+            <a href="norsfaines.html">1 状态组; 潮汐状态句及其流向</a>
+            <a href="norsfaines2.html">2 关系组; 主角关系句的次数及灵性</a>
+        </div>
+        <button class="hyy-contents-btn" type="button" aria-label="目录">☰</button>
+    `;
+    document.body.insertAdjacentHTML('afterbegin', contentsHTML);
+
+    // 2. 交互逻辑
     const btn = document.querySelector('.hyy-contents-btn');
     const contents = document.querySelector('.hyy-contents');
     const closeBtn = document.querySelector('.hyy-contents-close');
@@ -15,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.setAttribute('aria-expanded', 'true');
     });
 
-    // 关闭按钮
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             contents.classList.remove('show');
@@ -23,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 点击外部关闭
     document.addEventListener('click', (e) => {
         if (!contents.contains(e.target) && e.target !== btn) {
             contents.classList.remove('show');
