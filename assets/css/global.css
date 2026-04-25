@@ -328,6 +328,12 @@ ul, ol {
     margin: 0 0.2em 0 0;
 }
 
+.hyy-math {
+    font-family: "Song", system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-p);
+    padding: 0 2rem;
+}
+
 .hyy-nav {
     background: var(--color-bg);
     color: var(--color-text);
@@ -537,4 +543,38 @@ ul, ol {
 #nav-container {
     position: relative;
 }
- */
+*/
+
+.mermaid {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.mermaid svg g .root .edgePaths path {
+    stroke: var(--color-text) !important;
+}
+
+.mermaid svg g .root .nodes .node rect,
+.mermaid svg g .root .nodes .node circle,
+.mermaid svg g .root .nodes .node ellipse,
+.mermaid svg g .root .nodes .node polygon,
+.mermaid svg g .root .nodes .node path {
+    fill: var(--color-bg) !important;
+    stroke: var(--color-text) !important;
+    stroke-width: 2px !important;
+}
+
+.mermaid .nodeLabel {
+    color: var(--color-text) !important;
+}
+
+.mermaid .arrowMarkerPath {
+    fill: var(--color-text) !important;
+    stroke: var(--color-text) !important;
+}
+
+/* .flowchart-link {
+    stroke: var(--color-border) !important;
+    fill: none;
+} */
