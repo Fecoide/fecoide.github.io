@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="norsfaines.html">1 状态组; 潮汐状态句及其流向</a>
             <a href="norsfaines2.html">2 关系组; 滤镜关系句的次数及灵性</a>
             <a href="norsfaines3.html">3 关系词和状态词; 古典化合入门</a>
+            <a href="norsfaines4.html">4 关系与状态 [小结-其一]</a>
         </div>
         <button class="hyy-contents-btn" type="button" aria-label="目录">☰</button>
     `;
