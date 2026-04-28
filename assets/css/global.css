@@ -553,6 +553,7 @@ ul, ol {
 
 .mermaid svg g .root .edgePaths path {
     stroke: var(--color-text) !important;
+    stroke-width: 1.5px !important;
 }
 
 .mermaid svg g .root .nodes .node rect,
@@ -565,16 +566,31 @@ ul, ol {
     stroke-width: 2px !important;
 }
 
-.mermaid .nodeLabel {
+.mermaid .nodeLabel, .mermaid .label div .edgeLabel {
     color: var(--color-text) !important;
 }
 
-.mermaid .arrowMarkerPath {
+.mermaid .arrowMarkerPath, marker {
     fill: var(--color-text) !important;
     stroke: var(--color-text) !important;
 }
 
-/* .flowchart-link {
-    stroke: var(--color-border) !important;
-    fill: none;
-} */
+.mermaid .cluster rect {
+    fill: var(--color-del) !important;
+    stroke: var(--color-text) !important;
+    stroke-width: 2px !important;
+    opacity: 0.5;
+}
+
+.mermaid .statediagram-cluster rect {
+    fill: var(--color-del) !important;
+    stroke: var(--color-text) !important;
+    stroke-width: 2px !important;
+}
+
+.mermaid .edgeLabel .label rect {
+  fill: transparent !important;
+}
+
+
+
