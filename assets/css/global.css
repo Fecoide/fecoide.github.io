@@ -3,11 +3,6 @@
 @import url('./theme.css');
 
 @font-face {
-    font-family: 'Pixel';
-    src: url('pixel.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'Song';
     src: url('song.ttf') format('truetype');
 }
@@ -272,17 +267,6 @@ ul, ol {
     padding: 1rem 2rem 1rem 2rem;
     position: relative;
     text-align: center;
-}
-
-.hyy-quote::before {
-    color: var(--color-blockquote);
-    content: "“";
-    font-size: 5em;
-    left: 0.25rem;
-    position: absolute;
-    top: -1.5rem;
-    left: -0.4rem;
-    z-index: -1;
 }
 
 .hyy-quote-content {

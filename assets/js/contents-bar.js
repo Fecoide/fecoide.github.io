@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="norsfaines3.html">3 关系词和状态词; 古典化合入门</a>
             <a href="norsfaines4.html">4 关系与状态 [小结-其一]</a>
             <a href="norsfaines5.html">5 潮汐与行星</a>
+            <a href="norsfaines6.html">6 有灵视角下的滤镜与主角</a>
             </div>
         <button class="hyy-contents-btn" type="button" aria-label="目录">☰</button>
     `;
