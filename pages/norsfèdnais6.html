@@ -28,7 +28,18 @@
     <h1>6. 有灵视角下的滤镜与主角</h1>
     <h2>6.1 词汇表</h2>
     <ul>
-        <li><b>leyr</b> pr. "缝补", laome, leyn</li>
+        <li>
+            <b>fuyr</b> pa. "搜索", fuyras, fuyrelder
+        </li>
+        <li>
+            <b>Hranus</b> pa. "兮賴努(人名)", Hranuas, Hranuelder
+        </li>
+        <li>
+            <b>ortadner</b> pr. "发布委托", ortadneme, ortadnen
+        </li>
+        <li>
+            <b>sharqer</b> pr. "下坠", sharqeme, sharqen
+        </li>
     </ul>
 
     <h2>6.2 语法</h2>
@@ -118,20 +129,21 @@
 
     <p class="mermaid">
         stateDiagram-v2
-        direction LR
         VR1: fuyr-
         VA1: -a
         滤镜: Hranue-
         VA2: -ortadne-
         VR2: -∅
         state 状态帕迷 {
-        VR1 --> VA1
+        VR1 --> VA1: 帕迷古典化合
+        note left of VR1 : 主角
         }
         state 关系帕迷 {
-        滤镜 --> VA2
-        VA2 --> VR2
+        滤镜 --> VA2: 韦尔斯古典化合
+        note left of 滤镜 : 滤镜
+        VA2 --> VR2: 帕迷古典化合
         }
-        VA1 --> VR2: 古典化合
+        VA1 --> VR2: 喜爱组古典化合
         滤镜 --> VR1: 关系流向
     </p>
 
