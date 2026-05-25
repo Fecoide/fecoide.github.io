@@ -14,13 +14,21 @@
 
 @media (max-width: 600px) {
     :root {
-        --font-size-h1: 1.75rem;
-        --font-size-h2: 1.4rem;
-        --font-size-p: 0.9375rem;
-        --font-size-p-smaller: 0.8125rem;
-        --font-size-p-larger: 1.125rem;
-        --font-size-p-larger-larger: 1.25rem;
-        --font-size-li: 0.9375rem;
+        --font-size-h1: 1.2rem;
+        --font-size-h2: 1rem;
+        --font-size-h3: 1rem;
+        --font-size-p: 0.9rem;
+        --font-size-p-smaller: 0.85rem;
+        --font-size-p-larger: 1rem;
+        --font-size-p-larger-larger: 1.2rem;
+        --font-size-li: 0.9rem;
+        --font-size-drop: 2em;
+        --font-size-desc: 0.8rem;
+    }
+
+    h1::after {
+        height: 12px !important;
+        margin: -16px auto 0 !important;
     }
 }
 

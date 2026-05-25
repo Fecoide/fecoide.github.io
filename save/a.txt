@@ -135,3 +135,34 @@
             我看见那幅图景: 有一个梦已经彻底地熄灭, 而飞蛾飘摇着, 正要将这个梦带向那长眠的湖泊. 那姿态, 宛若磷火在发出叹息.
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+    :root {
+    /* 大背景 */
+    /* --color-bg: #f3efe8; */
+    --color-bg: #f8f6f1;
+    /* 文字 */
+    --color-text: #2c2822;
+    /* 粗体字 */
+    --color-emphasis: #999ec1;
+    /* 引用背景 */
+    --color-blockquote: #e3ddd2;
+    /* 刮层底色 */
+    --color-del: #0000000d;
+    /* 边框 */
+    --color-border: #cfc3b6;
+    /* 当作底色的阴影 */
+    --color-shadow-bg: #e3ddd2;
+    /* 按钮悬停 */
+    --color-btn-hover: #ded3c8;
+
+    /* 段落字体大小 */
+}
