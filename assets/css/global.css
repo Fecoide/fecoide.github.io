@@ -613,18 +613,30 @@ marker {
 }
 
 .mermaid .cluster rect {
-    fill: var(--color-del) !important;
+    fill: var(--color-blockquote) !important;
     stroke: var(--color-text) !important;
     stroke-width: 2px !important;
     opacity: 0.5;
 }
 
 .mermaid .statediagram-cluster rect {
-    fill: var(--color-del) !important;
-    stroke: var(--color-text) !important;
+    fill: var(--color-blockquote) !important;
+    stroke: var(--color-border) !important;
     stroke-width: 2px !important;
 }
 
 .mermaid .edgeLabel .label rect {
     fill: transparent !important;
 }
+
+/* mjx-container {
+    font-size: var(--font-size-p-larger) !important;
+}
+
+mjx-math {
+    font-family: "Song", serif !important;
+}
+
+mjx-mi {
+    font-family: "Song", serif !important;
+} */
