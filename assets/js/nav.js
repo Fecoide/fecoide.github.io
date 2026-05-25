@@ -11,13 +11,13 @@ function loadNav() {
     const navHtml = `
         <nav class="hyy-nav" id="hyy-main-nav">
             <div class="hyy-nav-header">
-                <span class="hyy-nav-title">NORSFAINES</span>
+                <span class="hyy-nav-title">NORSFÈDNAIS</span>
                 <button class="hyy-nav-close" id="nav-close-btn" aria-label="关闭">✕</button>
             </div>
             <div class="hyy-nav-links">
                 <a href="${prefix}index.html" data-nav="home">首页</a>
                 <a href="${prefix}pages/languages.html" data-nav="languages">语言列表</a>
-                <a href="${prefix}pages/norsfaines.html" data-nav="grammar">格蔻尔语</a>
+                <a href="${prefix}pages/norsfèdnais.html" data-nav="grammar">格蔻尔语</a>
                 <a href="${prefix}pages/404.html" data-nav="grammar">法罗士语</a>
                 <a href="${prefix}pages/404.html" data-nav="grammar">诺尔菲闪烁的特耳荷斯</a>
             </div>

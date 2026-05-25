@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const contentsHTML = `
         <div class="hyy-contents">
             <button class="hyy-contents-close" type="button" aria-label="关闭目录">✕</button>
-            <a href="norsfaines.html">1 状态组; 潮汐状态句及其流向</a>
-            <a href="norsfaines2.html">2 关系组; 滤镜关系句的次数及灵性</a>
-            <a href="norsfaines3.html">3 关系词和状态词; 古典化合入门</a>
-            <a href="norsfaines4.html">4 关系与状态 [小结-其一]</a>
-            <a href="norsfaines5.html">5 潮汐与行星</a>
-            <a href="norsfaines6.html">6 有灵视角下的滤镜与主角</a>
+            <a href="norsfèdnais1.html">1 状态组; 潮汐状态句及其流向</a>
+            <a href="norsfèdnais2.html">2 关系组; 滤镜关系句的次数及灵性</a>
+            <a href="norsfèdnais3.html">3 关系词和状态词; 古典化合入门</a>
+            <a href="norsfèdnais4.html">4 关系与状态 [小结-其一]</a>
+            <a href="norsfèdnais5.html">5 潮汐与行星</a>
+            <a href="norsfèdnais6.html">6 有灵视角下的滤镜与主角</a>
             </div>
         <button class="hyy-contents-btn" type="button" aria-label="目录">☰</button>
     `;

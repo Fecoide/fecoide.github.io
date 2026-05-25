@@ -38,7 +38,7 @@ a {
 
 b {
     color: var(--color-emphasis);
-    /* font-weight: 300; */
+    font-weight: 300;
     margin: 0 0.2em;
 }
 
@@ -78,6 +78,7 @@ body {
     font-family: "Round", system-ui, -apple-system, sans-serif;
     /* display: flex; */
     line-height: 1.6;
+    max-width: 1200px;
     min-height: 100vh;
     padding: 2rem 10vw 0 10vw;
     -webkit-user-select: none;
@@ -123,7 +124,7 @@ hr {
 hr::after {
     background: var(--color-bg);
     color: var(--color-border);
-    content: "NORSFAINES";
+    content: "NORSFÈDNAIS";
     font-size: 0.8rem;
     padding: 0 4px;
     position: relative;
@@ -134,6 +135,8 @@ hr::after {
 html {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 li {
@@ -156,7 +159,8 @@ table caption {
     margin-bottom: 1rem;
 }
 
-th, td {
+th,
+td {
     border: 2px solid var(--color-border);
     padding: 8px 16px;
 }
@@ -167,7 +171,8 @@ th {
     font-family: "Song", system-ui, -apple-system, sans-serif;
 }
 
-ul, ol {
+ul,
+ol {
     /* list-style-type: disc; */
     margin-bottom: 1rem;
     margin-left: 1rem;
@@ -183,8 +188,8 @@ ul, ol {
 .hyy-contents {
     background: var(--color-bg);
     color: var(--color-text);
-    /* border-right: 3px solid var(--color-border); */
-    font-family: "Song", system-ui, -apple-system, sans-serif;
+    border-left: 2px solid var(--color-border);
+    font-family: "Round", system-ui, -apple-system, sans-serif;
     font-size: var(--font-size-p-smaller);
     height: 100%;
     right: 0;
@@ -211,6 +216,7 @@ ul, ol {
     color: var(--color-text);
     cursor: pointer;
     font-size: 16px;
+    font-weight: 1000;
     height: 40px;
     padding: 8px;
     position: fixed;
@@ -235,7 +241,7 @@ ul, ol {
 
 .hyy-contents a:hover {
     color: var(--color-emphasis);
-    font-size: var(--font-size-p);
+    /* font-size: var(--font-size-p); */
 }
 
 .hyy-contents-close {
@@ -248,7 +254,7 @@ ul, ol {
     font-weight: 1000;
     padding: 8px 16px;
     position: absolute;
-    right: 16px;
+    right: 8px;
     top: 8px;
     transition: all 0.4s;
     z-index: 999;
@@ -308,7 +314,7 @@ ul, ol {
     color: var(--color-emphasis);
     float: left;
     font-size: var(--font-size-drop);
-    font-weight: bold;
+    /* font-weight: bold; */
     margin: 0 0.2em 0 0;
 }
 
@@ -321,8 +327,8 @@ ul, ol {
 .hyy-nav {
     background: var(--color-bg);
     color: var(--color-text);
-    /* border-right: 3px solid var(--color-border); */
-    font-family: "Song", system-ui, -apple-system, sans-serif;
+    border-right: 2px solid var(--color-border);
+    font-family: "Round", system-ui, -apple-system, sans-serif;
     font-size: var(--font-size-p-smaller);
     height: 100%;
     left: 16px;
@@ -352,7 +358,7 @@ ul, ol {
 
 .hyy-nav a:hover {
     color: var(--color-emphasis);
-    font-size: var(--font-size-p);
+    /* font-size: var(--font-size-p); */
 }
 
 .hyy-nav-btn {
@@ -361,7 +367,8 @@ ul, ol {
     border-radius: 6px;
     color: var(--color-text);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 1000;
     padding: 8px 16px;
     position: absolute;
     left: 16px;
@@ -550,11 +557,13 @@ ul, ol {
     stroke-width: 2px !important;
 }
 
-.mermaid .nodeLabel, .mermaid .label div .edgeLabel {
+.mermaid .nodeLabel,
+.mermaid .label div .edgeLabel {
     color: var(--color-text) !important;
 }
 
-.mermaid .arrowMarkerPath, marker {
+.mermaid .arrowMarkerPath,
+marker {
     fill: var(--color-text) !important;
     stroke: var(--color-text) !important;
 }
@@ -573,8 +582,5 @@ ul, ol {
 }
 
 .mermaid .edgeLabel .label rect {
-  fill: transparent !important;
+    fill: transparent !important;
 }
-
-
-
